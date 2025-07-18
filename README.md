@@ -17,6 +17,7 @@ A web-based application to **manage, analyze, and visualize student marks**. Eas
 ## Demo
 
 ![Screenshot](Screenshot.png)
+**Live Site:** [https://student-marks.netlify.app](https://student-marks-analyzer.netlify.app/)
 
 ## Getting Started
 
@@ -97,7 +98,10 @@ python -m http.server 5500
 
 ## License
 
-MIT
+This project is licensed under the [MIT License](LICENSE).
+
+
+
 
 ---
 

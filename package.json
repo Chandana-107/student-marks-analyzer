@@ -1,0 +1,29 @@
+{
+  "name": "marks-analyzer",
+  "version": "1.0.0",
+  "description": "A web application for analyzing student marks, providing insights such as total marks, average, and pass/fail status.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "live-server public",
+    "build": "echo 'Build step can be added here'",
+    "test": "echo 'No tests specified'"
+  },
+  "keywords": [
+    "student",
+    "marks",
+    "analyzer",
+    "web",
+    "application"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/marks-analyzer.git"
+  },
+  "homepage": "https://github.com/yourusername/marks-analyzer#readme"
+}

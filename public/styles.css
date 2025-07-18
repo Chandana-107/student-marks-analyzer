@@ -1,0 +1,300 @@
+/* Reset and base styles */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgba(91, 155, 213, 0.9);}
+*,*::before,*::after {
+  box-sizing: inherit;
+  transition: background 0.3s, color 0.3s;
+}
+h2 {
+  width: 100vw;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #23272f;
+}
+.flex-main {
+  width: 100vw;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+.analyzer-panel,.chart-panel {
+  background: linear-gradient(135deg, rgba(200, 137, 186, 0.9), rgba(255, 255, 255, 0.5));
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 2rem 1.5rem;
+  flex: 1 1 400px;
+  min-width: 340px;
+  max-width: 500px;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 0;
+}
+.chart-report-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.report-panel-wrapper {
+  width: 100%;
+}
+.report-panel {
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem 1rem;
+  min-width: 250px;
+  max-width: 350px;
+  margin-left: auto;
+  height: 100%;
+  overflow-y: auto;
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  max-width: 340px;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+.input-group input {
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline-offset: 2px;
+  transition: border-color 0.3s;
+}
+.input-group input:focus {
+  border-color: #699bd1;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.btn-group {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+.input-group button {
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.1s;
+}
+.input-group button:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+}
+.input-group button:active {
+  transform: scale(0.97);
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+  max-width: 100%;
+  background: rgba(255,255,255,0.15);
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(2px);
+}
+.input-group button,.file-btn {
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.1s;
+  margin: 0;
+}
+.input-group button:hover,.file-btn:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+}
+.input-group button:active,.file-btn:active {
+  transform: scale(0.97);
+}
+.panel-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+.panel-controls select,.panel-controls input[type="file"] {
+  font-size: 1rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #f9fbfd;
+  min-width: 140px;
+}
+#student-list,#results {
+  margin: 1rem 0;
+  background: rgba(255,255,255,0.18);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  max-height: 40vh;
+  overflow-y: auto;
+  color: #23272f;
+  font-weight: 500;
+}
+.student-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid #e5e7eb;
+  animation: slideIn 0.4s ease-in-out;
+}
+.student-entry:last-child {
+  border-bottom: none;
+}
+.student-entry button {
+  background: #7e759b;
+  color: #0f0e0e;
+  border: none;
+  border-radius: 3px;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.student-entry button:hover {
+  background: #b91c1c;
+}
+.student-entry.removing {
+  animation: slideOut 0.4s forwards;
+  opacity: 0;
+  transform: translateX(100%);
+}
+.pass {
+  color: #16a34a;
+  font-weight: bold;
+}
+.fail {
+  color: #dc2626;
+  font-weight: bold;
+}
+#marksChart {
+  width: 100% !important;
+  max-width: 950px;
+  height: 400px !important;
+  margin: 0 auto;
+  display: block;
+  opacity: 0;
+  animation: fadeIn 0.6s ease 0.3s forwards;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+@media (max-width: 1200px) {
+  h2 {
+    font-size: 1.6rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .flex-main {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .analyzer-panel,
+  .chart-panel,
+  .report-panel {
+    max-width: 98vw;
+    min-width: 0;
+  }
+  #marksChart {
+    max-width: 98vw;
+    height: 220px !important;
+  }
+  .panel-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+}
+.chart-options {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.file-btn {
+  display: inline-block;
+  background: #007bff;
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  transition: background 0.3s;
+  border: none;
+  position: relative;
+}
+.file-btn:hover {
+  background: #0056b3;
+}
+.file-btn input[type="file"] {
+  display: none;
+}

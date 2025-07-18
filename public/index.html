@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Marks Analyzer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h2>STUDENT MARKS ANALYZER</h2>
+  <div class="flex-main">
+    <div class="analyzer-panel">
+      <form class="input-group" onsubmit="event.preventDefault(); addStudent();">
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter Name"
+          aria-label="Student name"
+          autocomplete="off"
+        />
+        <input
+          type="number"
+          id="marks"
+          placeholder="Enter Marks"
+          aria-label="Student marks"
+          min="0"
+          max="100"
+        />
+        <div class="btn-group">
+          <button type="button" onclick="addStudent()" aria-label="Add student">Add</button>
+          <button type="button" onclick="analyzeMarks()" aria-label="Analyze marks">Analyze</button>
+          <button type="button" onclick="exportCSV()" aria-label="Export CSV">Export CSV</button>
+          <button type="button" onclick="clearAll()" aria-label="Clear all students">Clear All</button>
+          <label class="file-btn">
+            <input type="file" id="importCSV" accept=".csv,.xls,.xlsx" aria-label="Import CSV file" tabindex="0" style="display:none;">
+            Choose File
+          </label>
+        </div>
+      </form>
+      <div id="student-list" aria-live="polite" aria-label="List of students" tabindex="0"></div>
+      <div id="results" aria-live="polite" aria-label="Analysis results" tabindex="0"></div>
+    </div>
+    <div class="chart-report-wrapper">
+      <div class="chart-panel">
+        <div class="chart-options">
+          <label for="chartType"><strong>Chart Type:</strong></label>
+          <select id="chartType">
+            <option value="bar">Bar</option>
+            <option value="line">Line</option>
+            <option value="pie">Pie</option>
+          </select>
+          <div style="flex:1"></div> 
+          <label for="chartFilter" style="margin-left: 1.5rem;"><strong>Filter:</strong></label>
+          <select id="chartFilter">
+            <option value="all">All Students</option>
+            <option value="top10">Top 10 Students</option>
+            <option value="pass">Pass Students</option>
+            <option value="fail">Fail Students</option>
+          </select>
+        </div>
+        <canvas id="marksChart"></canvas>
+        <button type="button" onclick="downloadChart()">Download Chart as Image</button>
+      </div>
+      <div class="report-panel-wrapper">
+        <div class="report-panel" id="report-panel" style="display: none;">
+          <h3> Analysis Report</h3>
+          <p id="report-content"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="../src/app.js"></script>
+</body>
+</html>

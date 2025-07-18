@@ -4,27 +4,27 @@ A web-based application to **manage, analyze, and visualize student marks**. Eas
 
 ## Features
 
-- **Add Student Marks:** Manually enter student names and marks.
-- **Analyze Results:** View pass/fail status and a summary report.
-- **Import CSV:** Upload student data from CSV files.
-- **Export CSV:** Download the current student data as a CSV file.
-- **Clear All:** Remove all student data with one click.
-- **Filter & Visualize:** Filter by all students, top 10, pass, or fail students.
-- **Chart Visualization:** View data as Bar, Line, or Pie charts (powered by Chart js).
-- **Download Chart:** Save the chart as an image.
-- **Responsive Design:** Works well on desktops and laptops.
+- **Add Student Marks:**  Manually enter student names and marks.
+- **Analyze Results:**  View pass/fail status and a summary report.
+- **Import CSV:**  Upload student data from CSV files.
+- **Export CSV:**  Download the current student data as a CSV file.
+- **Clear All:**  Remove all student data with one click.
+- **Filter & Visualize:**  Filter by all students, top 10, pass, or fail students.
+- **Chart Visualization:**  View data as Bar, Line, or Pie charts (powered by Chart js).
+- **Download Chart:**  Save the chart as an image.
+- **Responsive Design:**  Works well on desktops and laptops.
 
 ## Demo
 
-![Screenshot](Screenshot.png)
 **Live Site:** [https://student-marks.netlify.app](https://student-marks-analyzer.netlify.app/)
+![Screenshot](Screenshot.png)
 
 ## Getting Started
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/student-marks-analyzer.git
+git clone https://Chandana-107//student-marks-analyzer.git
 cd student-marks-analyzer
 ```
 

@@ -17,6 +17,8 @@ A web-based application to **manage, analyze, and visualize student marks**. Eas
 ## Demo
 
 **Live Site:** [https://student-marks.netlify.app](https://student-marks-analyzer.netlify.app/)
+
+
 ![Screenshot](Screenshot.png)
 
 ## Getting Started
